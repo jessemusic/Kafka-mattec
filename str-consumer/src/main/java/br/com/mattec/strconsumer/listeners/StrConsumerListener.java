@@ -11,9 +11,21 @@ import org.springframework.stereotype.Component;
 public class StrConsumerListener {
 
 
-    @KafkaListener(groupId = "gruop1", topics = "STR-TOPIC", containerFactory = "strContainerFactory")
-    public void listener(String message){
-        log.info("Receive message {}", message);
+    @KafkaListener(groupId = "group-0", topics = "STR-TOPIC", containerFactory = "strContainerFactory")
+    public void create(String message){
+        log.info("CREATE ::: Receive message {}", message);
+
+    }
+
+    @KafkaListener(groupId = "group-1", topics = "STR-TOPIC", containerFactory = "strContainerFactory")
+    public void log(String message){
+        log.info("LOG ::: Receive message {}", message);
+
+    }
+
+    @KafkaListener(groupId = "group-2", topics = "STR-TOPIC", containerFactory = "strContainerFactory")
+    public void history (String message){
+        log.info("HISTORY ::: Receive message {}", message);
 
     }
 }
