@@ -1,4 +1,4 @@
-package br.com.mattec.strconsumer.vonfig;
+package br.com.mattec.strconsumer.config;
 
 
 import lombok.RequiredArgsConstructor;
