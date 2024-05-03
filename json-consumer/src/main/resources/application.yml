@@ -1,6 +1,7 @@
-#spring.application.name=str-producer
+#spring.application.name=json-consumer
 server:
-  port: ${PORT:8000}
+  port: ${PORT:8300}
 spring:
   kafka:
     bootstrap-servers: ${KAFKA_HOST:localhost:29092}
+
